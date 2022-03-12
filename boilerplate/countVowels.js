@@ -1,28 +1,22 @@
 const countVowels = (str) => {
 
-  let vocalObj = { a, e, i, o,u}
-  const wordSeparate = str.split();
+  let vowelCounterObj = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0
+  };
 
-  for (let i = 0; i < wordSeparate.length; i++) {
-    if (wordSeparate[i] == "a") {
-      Object.assign(vocalObj, wordSeparate[i])
-    }
-    if (wordSeparate[i] == "e") {
-      Object.assign(vocalObj, wordSeparate[i])
-    }
-    if (wordSeparate[i] == "i") {
-      Object.assign(vocalObj, wordSeparate[i])
-    }
-    if (wordSeparate[i] == "o") {
-      Object.assign(vocalObj, wordSeparate[i])
-    }
-    if (wordSeparate[i] == "u") {
-      Object.assign(vocalObj, wordSeparate[i])
-    }
-  }
-  return vocalObj
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].toLowerCase() === 'a') vowelCounterObj.a += 1;
+    if (str[i].toLowerCase() === 'e') vowelCounterObj.e += 1;
+    if (str[i].toLowerCase() === 'i') vowelCounterObj.i += 1;
+    if (str[i].toLowerCase() === 'o') vowelCounterObj.o += 1;
+    if (str[i].toLowerCase() === 'u') vowelCounterObj.u += 1;
+  };
+
+  return vowelCounterObj
 };
-
-console.log(countVowels)
 
 module.exports = countVowels;
